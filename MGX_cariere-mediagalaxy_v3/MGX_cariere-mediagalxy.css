@@ -1,0 +1,584 @@
+html {
+  height: 100%;
+  margin-bottom: 1px;
+}
+
+.Location-trigger {
+  text-decoration: none;
+  padding: 12px 0px 12px 20px;
+  position: relative;
+  display: block;
+  font-weight: 700;
+  color: #000;
+}
+
+.Location-item a {
+  color: #000;
+}
+
+
+.Tabs-navList {
+  overflow-y: hidden;
+  box-shadow: inset 0 -1px 0 0 #c2b9b3,
+              inset 0 -6px 0 0 #e8e3e1;
+}
+
+.Tabs-navEntry {
+  min-width: 95px;
+}
+
+.Tabs-navEntry:first-of-type {
+  border-left: 0;
+}
+
+.Tabs-navEntry.-Active .Tabs-trigger {
+  box-shadow: inset 0px 6px 0px 0px #244196;
+}
+
+@media (max-width: 1020px) {
+  .Tabs-navEntry.-Active .Tabs-trigger {
+    padding-bottom: 16px;
+    padding-top: 12px;
+    margin-top: 4px;
+  }
+}
+
+.Tabs-navEntry.-Active,
+.Tabs-navEntry.-Active+.Tabs-navEntry {
+  border-left: 1px solid transparent;
+}
+
+.Tabs-navEntry.-Active .Tabs-trigger {
+  color: #333;
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #c2b9b3;
+  border-bottom-color: #fff;
+}
+
+.Tabs-contentEntry.-Active {
+  display: block;
+}
+
+.Tabs-contentEntry,
+.Tabs-contentEntry.-Inactive {
+  display: none;
+}
+
+ul.CariereTopDescription {
+  padding: 0px 0px 36px 0px;
+}
+
+.CariereTopDescription li {
+  list-style-type: none;
+}
+
+.CariereTopDescription li::before {
+  content: "•";
+  position: relative;
+  top: 3px;
+  padding: 0px 8px 0px 0px;
+  font-size: 26px;
+  color: #244196;
+}
+
+.CariereTopDescription li span {
+  color: #555555;
+  font-family: 'Trebuchet MS';
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 26px;
+}
+
+button.CariereAccordion {
+  position: relative;
+  display: block;
+  height: 79px;
+  width: 100%;
+  padding: 0px;
+  color: #000;
+  font-family: Metawp;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  border: none;
+  border-radius: 0px;
+  border-top: 1px solid #DADADA;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+}
+
+button.CariereAccordion:first-of-type {
+  border-top: none;
+}
+
+button.CariereAccordion::after {
+  position: absolute;
+  right: 0px;
+  top: calc(50% - 13px);
+  content: '\002b';
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 26px;
+  width: 26px;
+  border-radius: 26px;
+  border: 1px solid #989898;
+  font-family: 'Glyphicons Halflings';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #68625F;
+}
+
+button.CariereAccordion.-Active::after {
+  content: '\2212';
+  border: 1px solid #244196;
+  background: #244196;
+  color: white;
+}
+
+div.CarierePanel {
+  position: relative;
+  top: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.7s ease-in-out;
+}
+
+div.CarierePanel.-Visible {
+  opacity: 1;
+  max-height: 10000px;
+}
+
+@media (max-width: 320px) {
+  .Tabs-navList {
+    margin-left: -14px;
+    margin-right: -14px;
+  }
+}
+
+@media (max-width: 522px) {
+  .Tabs-navEntry .Tabs-trigger {
+    padding: 16px 10px;
+  }
+}
+
+.CariereBannerTop {
+  padding: 65px 0px 50px 0px;
+}
+
+.CariereAccordionContainer {
+  display: block;
+  float: left;
+}
+
+@media (min-width: 522px) {
+  .CariereAccordionContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.CarierePozitie {
+  display: flex;
+  align-self: center;
+  padding: 0px 20px 0px 0px;
+  font-size: 20px;
+}
+
+@media (min-width: 640px) {
+  .CarierePozitie {
+    width: 300px;
+  }
+}
+
+.CariereNumarPozitie {
+  display: flex;
+  width: fit-content;
+  padding: 7px 15px 7px 15px;
+  border-radius: 30px;
+  background-color: #F6F5F5;
+  font-family: 'Trebuchet MS';
+  font-size: 14px;
+  font-weight: normal;
+}
+
+p.CariereJobDescriptionTitlu {
+  padding: 14px 0px 0px 0px;
+  font-family: 'Trebuchet MS';
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+p.CariereJobDescriptionTitlu:first-of-type {
+  padding: 0px;
+  -webkit-margin-before: 0px;
+}
+
+p.CariereJobDescription span::before {
+  content: "•";
+  position: relative;
+  top: 3px;
+  padding: 0px 8px 0px 0px;
+  font-size: 26px;
+  color: #D71440;
+}
+
+p.CariereJobDescription span {
+  display: block;
+  color: #545454;
+  font-family: 'Trebuchet MS';
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 26px;
+}
+
+ul.cariere-ListOrase {
+  padding-bottom: 25px;
+}
+
+.ButtonAction {
+  position: relative;
+  display: inline-block;
+  min-width: 175px;
+  padding: 12px 18px 12px 56px;
+  margin: 10px 0;
+  border: none;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  color: #58524E !important;
+  /* default disabled state, '#58524E' is default body color CSS Altex / Media Galaxy, '!important' to override CSS Altex / Media Galaxy */
+  background-color: #EBEBEB !important;
+  /* override CSS Altex / Media Galaxy, override CSS Altex / Media Galaxy */
+  background-image: linear-gradient(to top, #EBEBEB, #F2F2F2) !important;
+  /* override CSS Altex / Media Galaxy */
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ButtonAction::after {
+  /* default disabled state */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+  background-color: #58524E;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, .2);
+}
+
+/* change colors for ATX & MGX */
+.ButtonAction.-AdaugaInCosMGX,
+.ButtonAction.-VeziDetaliiMGX {
+  color: #fff !important;
+  background-color: #C91C30 !important;
+  background-image: linear-gradient(to top, #E41D34, #C91C30) !important;
+}
+
+.ButtonAction.-AdaugaInCosATX::before,
+.ButtonAction.-AdaugaInCosMGX::before {
+  position: absolute;
+  content: '';
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='45' height='28' viewBox='-5 -5 45 28'%3e%3cpath d='M15.28 2.357l3.727 8.602c.166.43 1.04.397 1.04.397h7.932c2.053 0 3.01-2.243 3.258-3.135l2.69-7.22c.122-.29.178-.486-.092-.686-.264-.014-.607-.022-.884-.036H8.657C8.132.28 7.7 1.47 7.7 1.99c0 .526.432.367.956.367h3.223l4.397 10.26c-1.012.477-1.72 1.22-1.72 2.404 0 1.642 1.352 2.978 3.01 2.978 1.665 0 3.01-1.053 3.01-2.695 0-.36-.17-.79-.375-1.176h5.817a2.216 2.216 0 0 0-.217.93c0 .035.01.066.01.1-.002.05-.015.097-.015.147 0 1.626 1.323 2.672 2.967 2.69.017 0 .032.006.05.006 1.662 0 3.01-1.317 3.01-2.942 0-1.538.247-2.855-2.005-2.994-.02-.005-.043-.014-.063-.014H18.46l-4.492-9.693h1.313zm2.974 0h2.62c-.14.706-1.07 1.55-1.77 1.55.758 0 1.792.71 1.792 1.442 0-.734 1.026-1.442 1.785-1.442-.7 0-1.628-.845-1.77-1.55h3.72c-.135.705-1.07 1.55-1.772 1.55.765 0 1.792.708 1.792 1.44 0-.732 1.027-1.44 1.786-1.44-.702 0-1.63-.845-1.77-1.55h3.68c-.14.705-1.068 1.55-1.77 1.55.76 0 1.793.708 1.793 1.44 0-.732 1.026-1.44 1.784-1.44-.7 0-1.63-.845-1.77-1.55H31.4l-1.96 5.3c-.024.036-.532 1.622-1.607 1.622H20.69l-3.18-6.923h.744zM28.808 16.1c-.602 0-1.09-.483-1.09-1.08a1.08 1.08 0 0 1 1.09-1.072c.602 0 1.09.477 1.09 1.073 0 .597-.488 1.08-1.09 1.08zm-11.24-2.152c.6 0 1.09.477 1.09 1.073 0 .597-.49 1.08-1.09 1.08a1.086 1.086 0 0 1-1.092-1.08c0-.595.49-1.072 1.09-1.072zm-4.662-5.956c0-.437-.37-1.48-.808-1.48h-6.56c-.438 0-.792.635-.792 1.07 0 .437.354 1.006.793 1.006h6.558c.44 0 .808-.16.808-.596zM11.016 5.3c0-.437-.348-1.558-.788-1.558H.8c-.44 0-.8.635-.8 1.072C0 5.25.36 5.82.8 5.82h9.428c.44 0 .787-.086.787-.52zm2.357 3.98H9.378c-.44 0-.8.636-.8 1.073 0 .436.36 1.004.8 1.004h3.995c.44 0 .794-.21.794-.645 0-.436-.354-1.432-.794-1.432zm9.485-.753c0-.734 1.027-1.724 1.786-1.724-.758 0-1.786-.99-1.786-1.724 0 .733-1.034 1.723-1.79 1.723.756 0 1.79.99 1.79 1.724zm3.988 0c0-.734 1.026-1.724 1.79-1.724-.764 0-1.79-.99-1.79-1.724 0 .733-1.028 1.723-1.792 1.723.764 0 1.792.99 1.792 1.724z' fill='%23FFF' fill-rule='evenodd'/%3e%3c/svg%3e");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 46px;
+  height: 37px;
+  left: 0px;
+  top: 0px;
+  -webkit-transform: scale(.8);
+  -ms-transform: scale(.8);
+  transform: scale(.8);
+  z-index: 1;
+}
+
+.ButtonAction.-VeziDetaliiATX::before,
+.ButtonAction.-VeziDetaliiMGX::before {
+  position: absolute;
+  content: '';
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='21' height='16' viewBox='-5 -5 21 16'%3e%3cpath d='M9.68 1.853a1.067 1.067 0 0 0 0-1.523 1.1 1.1 0 0 0-1.54 0L5.032 3.386 1.9.317a1.123 1.123 0 0 0-1.563 0l-.013.01a1.06 1.06 0 0 0 0 1.526l3.928 3.832c.43.422 1.13.42 1.558-.005l3.87-3.827z' fill='%23FFF' fill-rule='evenodd'/%3e%3c/svg%3e");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 46px;
+  height: 37px;
+  left: 0px;
+  top: 0px;
+  -webkit-transform: rotate(-90deg) scale(1);
+  -ms-transform: rotate(-90deg) scale(1);
+  transform: rotate(-90deg) scale(1);
+  z-index: 1;
+}
+
+.ButtonAction.-AdaugaInCosMGX::after,
+.ButtonAction.-VeziDetaliiMGX::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  border-radius: 5px 0 0 5px;
+  background-color: #244196;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, .2);
+}
+
+.ButtonAction.-AdaugaInCosMGX:hover::after,
+.ButtonAction.-VeziDetaliiMGX:hover::after {
+  background-color: #2E52AA;
+}
+
+.ButtonAction.-AdaugaInCosATX,
+.ButtonAction.-VeziDetaliiATX {
+  color: #000 !important;
+  background-color: #FDCD19 !important;
+  background-image: linear-gradient(0deg, #F9BF12, #FDCD19) !important;
+}
+
+.ButtonAction.-AdaugaInCosATX::after,
+.ButtonAction.-VeziDetaliiATX::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  border-radius: 5px 0 0 5px;
+  background-color: #D71440;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, .2);
+}
+
+.-AdaugaInCosATX:hover::after,
+.-VeziDetaliiATX:hover::after {
+  background-color: #E12554;
+}
+
+/* end of change colors for ATX & MGX */
+/* change button sizes */
+.ButtonAction.-Block {
+  display: block;
+  width: 100%;
+}
+
+.ButtonAction.-Small {
+  min-width: 150px;
+  padding: 8px 12px 8px 40px;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.ButtonAction.-Big {
+  min-width: 200px;
+  padding: 16px 24px 16px 56px;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.ButtonAction.-Big::before {
+  height: 46px;
+}
+
+.ButtonAction.-Big.-VeziDetaliiATX::before,
+.ButtonAction.-Big.-VeziDetaliiMGX::before {
+  -webkit-transform: rotate(-90deg) scale(1.2);
+  -ms-transform: rotate(-90deg) scale(1.2);
+  transform: rotate(-90deg) scale(1.2);
+}
+
+.ButtonAction.-Big.-AdaugaInCosATX::before,
+.ButtonAction.-Big.-AdaugaInCosMGX::before {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.ButtonAction.-VeziDetaliiATX.-Small::before,
+.ButtonAction.-VeziDetaliiMGX.-Small::before {
+  left: 9px;
+}
+
+.ButtonAction.-AdaugaInCosATX.-Small::before,
+.ButtonAction.-AdaugaInCosMGX.-Small::before {
+  left: 0px;
+}
+
+.ButtonAction.-Small::after {
+  width: 35px;
+}
+
+/* end of sizes */
+
+.ModalContainer {
+  position: fixed;
+  display: block;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+
+  transform-style: "";
+  perspective: 2000px;
+  transform-origin: center center;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, .75);
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  will-change: opacity;
+  z-index: 1000;
+}
+
+.ModalContainer.-Active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ModalContent {
+  position: fixed;
+  display: block;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: 0.3s;
+
+  top: 50%;
+  left: 50%;
+  text-align: left;
+  background: #fff;
+  border: none;
+  box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, .2), 1px 3px 15px 2px rgba(0, 0, 0, .2);
+  transform-origin: 50% 25%;
+  border-radius: .28571429rem;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  will-change: top, left, margin, transform, opacity;
+
+  z-index: 1001;
+}
+
+.ModalContent.-Active {
+  visibility: visible;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  transform: scale(1);
+  opacity: 1;
+}
+
+.ModalContent>i:first-child+*,
+.ModalContent>:first-child:not(i) {
+  border-top-left-radius: 4.571px;
+  border-top-left-radius: .28571429rem;
+  border-top-right-radius: 4.571px;
+  border-top-right-radius: .28571429rem;
+}
+
+.ModalContent>:last-child {
+  border-bottom-left-radius: 4.571px;
+  border-bottom-left-radius: .28571429rem;
+  border-bottom-right-radius: 4.571px;
+  border-bottom-right-radius: .28571429rem;
+}
+
+.ModalContent .header {
+  display: block;
+  margin: 0;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(34, 36, 38, .15);
+  background: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, .05)) #fff;
+  box-shadow: inset 0 -1px 2px 0 rgba(0, 0, 0, .1);
+
+}
+
+.ModalClose {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0.9;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+  text-align: center;
+  font-style: normal;
+  text-transform: lowercase;
+  color: #fff;
+  background-color: #d71440;
+  width: 30px;
+  height: 30px;
+  border-radius: 0 3px 0 3px;
+}
+
+.ModalClose:hover {
+  opacity: 1;
+}
+
+.ModalContent .actions {
+  background: #f9fafb;
+  padding: 11px 20px;
+  border-top: 1px solid rgba(34, 36, 38, .15);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+  text-align: right;
+}
+
+.ModalContent {
+  width: 95%;
+  margin: 0 0 0 -47.5%;
+}
+
+@media only screen and (max-width: 767px) {
+  .ModalContent {
+    width: 95%;
+    margin: -67.5% 0 0 -47.5%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ModalContent {
+    width: 88%;
+    margin: 0 0 0 -44%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .ModalContent {
+    width: 850px;
+    margin: 0 0 0 -425px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .ModalContent {
+    width: 900px;
+    margin: 0 0 0 -450px;
+  }
+}
